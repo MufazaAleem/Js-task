@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript task</title>
+</head>
+<body>
+  <div id="grid-container"></div>
+
+  <script>
+    // Define the number of rows and columns
+    const rows = 10;
+    const columns = 10;
+
+    // Initialize a variable to store the current number
+    let currentNumber = 1;
+
+    // Get the grid container element from the HTML document
+    const gridContainer = document.getElementById("grid-container");
+
+    // Iterate over each row
+    for (let i = 0; i < rows; i++) {
+      let row = '';
+
+      // Iterate over each column
+      for (let j = 0; j < columns; j++) {
+        // Add the current number to the row string
+        row += currentNumber + ' ';
+
+        // Increment the current number
+        currentNumber++;
+      }
+
+      // Create a new div element for the row
+      const rowDiv = document.createElement("div");
+      rowDiv.textContent = row;
+
+      // Append the row div to the grid container
+      gridContainer.appendChild(rowDiv);
+    }
+  </script>
+</body>
+</html>
